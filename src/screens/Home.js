@@ -27,7 +27,7 @@ const HomeScreen = ({ navigation }) => {
               <Text style={styles.courseText}>Start learning new staff</Text>
               <TouchableOpacity
                 style={styles.courseButton}
-                onPress={() => navigation.navigate('')}
+                onPress={() => navigation.navigate('Course')}
               >
                 <Text style={styles.categoryText}>Categories</Text>
                 <Image

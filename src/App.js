@@ -7,6 +7,7 @@ import LandingScreen from './screens/Landing';
 import SignInScreen from './screens/SignIn';
 import SignUpScreen from './screens/SignUp';
 import HomeScreen from './screens/Home';
+import CourseScreen from './screens/Course';
 
 const RootStack = createStackNavigator();
 
@@ -43,6 +44,15 @@ const App = () => {
                 headerRight: () => (
                   <Button onPress={handleSignOut} title="Sign Out" />
                 )
+              }}
+            />
+            <RootStack.Screen
+              name="Course"
+              component={CourseScreen}
+              options={{
+                headerRight: () => {
+                  <Button onPress={handleSignOut} title="Sing Out" />
+                }
               }}
             />
           </>
