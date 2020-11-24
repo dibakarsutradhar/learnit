@@ -35,15 +35,17 @@ const App = () => {
     <NavigationContainer>
       <RootStack.Navigator>
         {isAuthenticated ? (
-          <RootStack.Screen
-            name="Home"
-            component={HomeScreen}
-             options={{
-               headerRight: () => (
-                 <Button onPress={handleSignOut} title="Sign Out" />
-               )
-             }}
-          />
+          <>
+            <RootStack.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{
+                headerRight: () => (
+                  <Button onPress={handleSignOut} title="Sign Out" />
+                )
+              }}
+            />
+          </>
         ) : (
           <>
             <RootStack.Screen
