@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, Button, StyleSheet, ImageBackground, TouchableOpacity, TextInput } from 'react-native';
+import { View, Image, Text, StyleSheet, ImageBackground, TouchableOpacity, TextInput } from 'react-native';
  
 const SignInScreen = ({ onSignIn, navigation }) => {
   return (

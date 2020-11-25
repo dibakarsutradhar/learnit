@@ -72,7 +72,7 @@ const App = () => {
             </RootStack.Screen>
             <RootStack.Screen name="Sign Up">
               {(props) => (
-                <SignUpScreen {...props} onSignIn={handleSignUp} />
+                <SignUpScreen {...props} onSignUp={handleSignUp} />
               )}
             </RootStack.Screen>
           </>
