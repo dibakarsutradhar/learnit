@@ -2,10 +2,18 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import ProgressCircle from 'react-native-progress-circle';
 
-const CourseList = (image, title, bg, onPress) => {
+const CourseList = ({image, title, bg, onPress}) => {
   return (
     <TouchableOpacity
-      style={styles.container, {backgroundColor: bg}}
+      style={{
+        flexDirection: "row",
+        padding: 20,
+        marginHorizontal: 20,
+        borderRadius: 20,
+        alignItems: "center",
+        marginTop: 10,
+        backgroundColor: bg
+      }}
       onPress={onPress}
     >
       <Image
@@ -34,14 +42,6 @@ const CourseList = (image, title, bg, onPress) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    padding: 20,
-    marginHorizontal: 20,
-    borderRadius: 20,
-    alignItems: "center",
-    marginTop: 10
-  },
   img: {
     width: 40,
     height: 40

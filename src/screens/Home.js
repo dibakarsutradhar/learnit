@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
-import ProgressCircle from 'react-native-progress-circle';
+
+import CourseList from '../screens/CourseList';
  
 const HomeScreen = ({ navigation }) => {
   return (
@@ -42,33 +43,23 @@ const HomeScreen = ({ navigation }) => {
               source={require('../images/undraw.png')}
             />
           </View>
-          <View>
-            <Text style={styles.courseProgresText}>Courses in Progress</Text>
-            <TouchableOpacity style={styles.courseListContainer, {backgroundColor:"#fdddf3"}}>
-              <Image
-                style={styles.courseListImg}
-                source={require('../images/xdIcon.png')}
-              />
-              <View>
-                <Text style={styles.courseListTitle}>Adobe XD</Text>
-                <Text style={styles.courseListDuration}>10 Hours, 20 Lessons</Text>
-              </View>
-              <Text style={styles.courseListPercentage}>25%</Text>
-              <ProgressCircle
-                percent={30}
-                radius={17}
-                borderWidth={1.5}
-                color="#f58084"
-                shadowColor="#fff"
-                bgColor="#fff"
-              >
-                <Image
-                  source={require('../images/playIcon.png')}
-                />
-              </ProgressCircle>
-            </TouchableOpacity>
-          </View>
         </View>
+        <Text style={styles.courseProgresText}>Courses in Progress</Text>
+        <CourseList
+          image={require('../images/xdIcon.png')}
+          title="Adobe Xd Prototyping"
+          bg="#fdddf3"
+        />
+        <CourseList
+          image={require('../images/sketchIcon.png')}
+          title="Sketch Shortcuts and Tricks"
+          bg="#fef8e3"
+        />
+        <CourseList
+          image={require('../images/aeIcon.png')}
+          title="UI Motion Design in After Effects"
+          bg="#fcf2ff"
+        />
       </ScrollView>
     </ImageBackground>
   );
@@ -122,34 +113,6 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8
   },
-  courseListContainer: {
-    flexDirection: "row",
-    padding: 20,
-    marginHorizontal: 20,
-    borderRadius: 20,
-    marginTop: 10
-  },
-  courseListImg: {
-    width: 40,
-    height: 40
-  },
-  courseListTitle: {
-    color: "#345c74",
-    fontSize: 13,
-    paddingHorizontal: 20,
-    width: 170
-  },
-  courseListDuration: {
-    color: "#f58084",
-    fontSize: 12,
-    paddingHorizontal: 20
-  },
-  courseListPercentage: {
-    color: "#345c74",
-    fontSize: 13,
-    paddingLeft: 10,
-    paddingRight: 10
-  },
   searchContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -169,7 +132,9 @@ const styles = StyleSheet.create({
     fontSize: 35,
     paddingTop: 40,
     color: "#fff",
-    marginTop: 10
+    marginTop: 40,
+    alignItems: "center",
+    justifyContent: "center"
   },
 });
  
