@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
+import ProgressCircle from 'react-native-progress-circle';
  
 const HomeScreen = ({ navigation }) => {
   return (
@@ -41,6 +42,32 @@ const HomeScreen = ({ navigation }) => {
               source={require('../images/undraw.png')}
             />
           </View>
+          <View>
+            <Text style={styles.courseProgresText}>Courses in Progress</Text>
+            <TouchableOpacity style={styles.courseListContainer, {backgroundColor:"#fdddf3"}}>
+              <Image
+                style={styles.courseListImg}
+                source={require('../images/xdIcon.png')}
+              />
+              <View>
+                <Text style={styles.courseListTitle}>Adobe XD</Text>
+                <Text style={styles.courseListDuration}>10 Hours, 20 Lessons</Text>
+              </View>
+              <Text style={styles.courseListPercentage}>25%</Text>
+              <ProgressCircle
+                percent={30}
+                radius={17}
+                borderWidth={1.5}
+                color="#f58084"
+                shadowColor="#fff"
+                bgColor="#fff"
+              >
+                <Image
+                  source={require('../images/playIcon.png')}
+                />
+              </ProgressCircle>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </ImageBackground>
@@ -55,7 +82,7 @@ const styles = StyleSheet.create({
   },
   courseContainer: {
     flexDirection: "row",
-    backgroundColor: "#fff2f2",
+    backgroundColor: "#fff",
     marginTop: 15,
     marginHorizontal: 20,
     borderRadius: 20,
@@ -67,6 +94,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     width: 250,
     paddingRight: 100
+  },
+  courseProgresText: {
+    color: "#345c74",
+    flexDirection: "row",
+    fontSize: 20,
+    paddingHorizontal: 20,
+    marginTop: 20,
+    marginBottom: 10,
   },
   courseButton: {
     flexDirection: "row",
@@ -86,6 +121,34 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     width: 8,
     height: 8
+  },
+  courseListContainer: {
+    flexDirection: "row",
+    padding: 20,
+    marginHorizontal: 20,
+    borderRadius: 20,
+    marginTop: 10
+  },
+  courseListImg: {
+    width: 40,
+    height: 40
+  },
+  courseListTitle: {
+    color: "#345c74",
+    fontSize: 13,
+    paddingHorizontal: 20,
+    width: 170
+  },
+  courseListDuration: {
+    color: "#f58084",
+    fontSize: 12,
+    paddingHorizontal: 20
+  },
+  courseListPercentage: {
+    color: "#345c74",
+    fontSize: 13,
+    paddingLeft: 10,
+    paddingRight: 10
   },
   searchContainer: {
     flexDirection: "row",
