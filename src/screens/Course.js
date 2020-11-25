@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { Modalize } from 'react-native-modalize';
+
+import CourseList from '../screens/CourseList';
  
 const CourseScreen = ({ navigation }) => {
   return (
@@ -15,7 +17,44 @@ const CourseScreen = ({ navigation }) => {
         alwaysOpen={500}
         scrollViewProps={{showsVerticalScrollIndicator: false}}
       >
-        <View style={{ marginTop: 40 }}></View>
+        <View style={{ marginTop: 40 }}>
+          <CourseList
+            onPress={() => navigation.navigate('Home')}
+            image={require('../images/xdIcon.png')}
+            title="Adobe Xd Prototyping"
+            bg="#fdddf3"
+          />
+          <CourseList
+            image={require('../images/sketchIcon.png')}
+            title="Sketch Shortcuts and Tricks"
+            bg="#fef8e3"
+          />
+          <CourseList
+            image={require('../images/aeIcon.png')}
+            title="UI Motion Design in After Effects"
+            bg="#fcf2ff"
+          />
+          <CourseList
+            image={require('../images/sketchIcon.png')}
+            title="Sketch Shortcuts and Tricks"
+            bg="#fef8e3"
+          />
+          <CourseList
+            image={require('../images/aeIcon.png')}
+            title="UI Motion Design in After Effects"
+            bg="#fcf2ff"
+          />
+          <CourseList
+            image={require('../images/sketchIcon.png')}
+            title="Sketch Shortcuts and Tricks"
+            bg="#fef8e3"
+          />
+          <CourseList
+            image={require('../images/aeIcon.png')}
+            title="UI Motion Design in After Effects"
+            bg="#fcf2ff"
+          />
+        </View>
       </Modalize>
     </ImageBackground>
   );
