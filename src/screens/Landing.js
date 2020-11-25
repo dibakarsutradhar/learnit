@@ -8,7 +8,10 @@ const LandingScreen = ({ navigation }) => {
       style={{width:"100%", height:"100%"}}
     >
       <View style={styles.container}>
-        <Text>LearnIt</Text>
+        <View style={styles.logoContainer}>
+          <Text style={styles.logo}>LearnIt</Text>
+          <Text style={styles.sublogo}>eLearning</Text>
+        </View>
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() => navigation.navigate('Sign In')}
@@ -50,6 +53,17 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8
   },
+  logoContainer: {
+    marginTop: -200,
+    marginBottom: 200
+  },
+  logo: {
+    fontSize: 60,
+  },
+  sublogo: {
+    fontSize: 20,
+    color: "white"
+  }
 });
 
 export default LandingScreen;
