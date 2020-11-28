@@ -24,6 +24,11 @@
     "react-native-screens": "~2.10.1",
     "react-native-web": "~0.13.12"
   },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "~7.9.0"
   },
