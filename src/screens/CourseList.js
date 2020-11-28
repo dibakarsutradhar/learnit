@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import ProgressCircle from 'react-native-progress-circle';
 
+import colors from '../config/colors';
+
 const CourseList = ({image, title, bg, onPress}) => {
   return (
     <TouchableOpacity
@@ -29,9 +31,9 @@ const CourseList = ({image, title, bg, onPress}) => {
         percent={30}
         radius={17}
         borderWidth={1.5}
-        color="#f58084"
-        shadowColor="#fff"
-        bgColor="#fff"
+        color={colors.primary}
+        shadowColor={colors.fontPrimary}
+        bgColor={colors.fontPrimary}
       >
         <Image
           source={require('../images/playIcon.png')}
@@ -47,18 +49,18 @@ const styles = StyleSheet.create({
     height: 40
   },
   textTitle: {
-    color: "#345c74",
+    color: colors.secondary,
     fontSize: 13,
     paddingHorizontal: 20,
     width: 170
   },
   textDuration: {
-    color: "#f58084",
+    color: colors.primary,
     fontSize: 12,
     paddingHorizontal: 20
   },
   percentage: {
-    color: "#345c74",
+    color: colors.secondary,
     fontSize: 13,
     paddingLeft: 10,
     paddingRight: 10

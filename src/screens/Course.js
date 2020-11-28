@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { Modalize } from 'react-native-modalize';
 
+import colors from '../config/colors';
+
 import CourseList from '../screens/CourseList';
  
 const CourseScreen = ({ navigation }) => {
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
     height: "100%"
   },
   courseIntro: {
-    color: "#fff",
+    color: colors.fontPrimary,
     fontSize: 35,
     width: 200,
     alignSelf: "center",
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
   },
   modalizeHandleStyle: {
     marginTop: 30,
-    backgroundColor: "#e9e9e9",
+    backgroundColor: colors.modalize,
     width: 80
   },
   modalizeModalStyle: {

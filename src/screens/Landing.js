@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, ImageBackground, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
+import colors from '../config/colors';
+
 const LandingScreen = ({ navigation }) => {
   return (
     <ImageBackground
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10
   },
   buttonText: {
-    color: "#fff",
+    color: colors.fontPrimary,
     justifyContent: "center",
     fontSize: 12
   },

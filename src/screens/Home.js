@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 
+import colors from '../config/colors';
+
 import CourseList from '../screens/CourseList';
  
 const HomeScreen = ({ navigation }) => {
@@ -73,7 +75,7 @@ const styles = StyleSheet.create({
   },
   courseContainer: {
     flexDirection: "row",
-    backgroundColor: "#fff",
+    backgroundColor: colors.fontPrimary,
     marginTop: 15,
     marginHorizontal: 20,
     borderRadius: 20,
@@ -81,13 +83,13 @@ const styles = StyleSheet.create({
     paddingLeft: 30
   },
   courseText: {
-    color: "#345c74",
+    color: colors.secondary,
     fontSize: 20,
     width: 250,
     paddingRight: 100
   },
   courseProgresText: {
-    color: "#345c74",
+    color: colors.secondary,
     flexDirection: "row",
     fontSize: 20,
     paddingHorizontal: 20,
@@ -96,7 +98,7 @@ const styles = StyleSheet.create({
   },
   courseButton: {
     flexDirection: "row",
-    backgroundColor: "#f58084",
+    backgroundColor: colors.primary,
     alignItems: "center",
     marginTop: 20,
     width: 150,
@@ -105,7 +107,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10
   },
   categoryText: {
-    color: "#fff",
+    color: colors.fontPrimary,
     fontSize: 12
   },
   categoryImg: {
@@ -116,7 +118,7 @@ const styles = StyleSheet.create({
   searchContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: colors.fontPrimary,
     padding: 10,
     borderRadius: 12,
     marginHorizontal: 20,
@@ -131,7 +133,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     fontSize: 35,
     paddingTop: 40,
-    color: "#fff",
+    color: colors.fontPrimary,
     marginTop: 40,
     alignItems: "center",
     justifyContent: "center"
