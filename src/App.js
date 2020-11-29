@@ -8,6 +8,7 @@ import SignInScreen from './screens/SignIn';
 import SignUpScreen from './screens/SignUp';
 import HomeScreen from './screens/Home';
 import CourseScreen from './screens/Course';
+import XdScreen from './screens/Xd';
 
 const RootStack = createStackNavigator();
 
@@ -49,6 +50,15 @@ const App = () => {
             <RootStack.Screen
               name="Course"
               component={CourseScreen}
+              options={{
+                headerRight: () => {
+                  <Button onPress={handleSignOut} title="Sing Out" />
+                }
+              }}
+            />
+            <RootStack.Screen
+              name="Xd"
+              component={XdScreen}
               options={{
                 headerRight: () => {
                   <Button onPress={handleSignOut} title="Sing Out" />

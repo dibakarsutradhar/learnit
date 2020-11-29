@@ -21,7 +21,7 @@ const CourseScreen = ({ navigation }) => {
       >
         <View style={{ marginTop: 40 }}>
           <CourseList
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('Xd')}
             image={require('../images/xdIcon.png')}
             title="Adobe Xd Prototyping"
             bg="#fdddf3"
