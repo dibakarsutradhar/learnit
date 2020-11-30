@@ -1,19 +1,23 @@
 import React from 'react';
 import { View, Text, ImageBackground, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
+// Refactored color function
 import colors from '../config/colors';
 
 const LandingScreen = ({ navigation }) => {
   return (
+    // Background of the Screen
     <ImageBackground
       source={require('../images/Landing.png')}
       style={{width:"100%", height:"100%"}}
     >
       <View style={styles.container}>
+        {/* Logo */}
         <View style={styles.logoContainer}>
           <Text style={styles.logo}>LearnIt</Text>
           <Text style={styles.sublogo}>eLearning</Text>
         </View>
+        {/* Button */}
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() => navigation.navigate('Sign In')}

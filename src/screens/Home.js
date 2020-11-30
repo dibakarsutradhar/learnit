@@ -4,6 +4,7 @@ import { ScrollView, TextInput } from 'react-native-gesture-handler';
 
 import colors from '../config/colors';
 
+// importing course list component
 import CourseList from '../screens/CourseList';
  
 const HomeScreen = ({ navigation }) => {
@@ -47,6 +48,8 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </View>
         <Text style={styles.courseProgresText}>Courses in Progress</Text>
+        
+        {/* Calling CourseList component to make the code reusable */}
         <CourseList
           image={require('../images/xdIcon.png')}
           title="Adobe Xd Prototyping"
